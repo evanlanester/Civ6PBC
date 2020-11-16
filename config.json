@@ -1,0 +1,8 @@
+{
+  "playerMapping": {
+    'Steam name': 'discord user -> copy id'
+   }
+  "serverMapping": {
+    "GameName": "webhook after discord.com/api/webhooks/"
+  }
+}
