@@ -1,8 +1,6 @@
 const http = require('http');
 const https = require('https');
 const config = require(./config.json);
-// npm install http https
-
 const port = config.port;
 const host = config.host;
 
@@ -25,7 +23,7 @@ const server = http.createServer(function (req, response) {
         req.on('data', function (data) {
             postData = JSON.parse(data);
             console.log('Post Data: ' + postData);
-        })
+        });
         req.on('end', function () {
             if (typeof playerMapping[postData.value2] == 'undefined') {
                 var playerId = postData.value2;
