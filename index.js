@@ -3,12 +3,11 @@ const https = require('https');
 const config = require(./config.json);
 // npm install http https
 
-const port = 3000
-const host = '127.0.0.1'
+const port = config.port;
+const host = config.host;
 
 // ############################################################
 // Map the Steam name to the discord Id to @mention the players
-
 var playerMapping = config.playerMapping;
 
 // #################################################################
