@@ -1,6 +1,6 @@
 const http = require('http');
 const https = require('https');
-const package = require('./package.json');
+const config = require(./config.json);
 // npm install http https
 
 const port = 3000
@@ -8,15 +8,12 @@ const host = '127.0.0.1'
 
 // ############################################################
 // Map the Steam name to the discord Id to @mention the players
-var playerMapping = {
-    //'Steam name': (Subject to change) 'discord user -> copy id'
-};
+
+var playerMapping = config.playerMapping;
 
 // #################################################################
 // Map game name to webook IDs so you can have channels per game
-var serverMapping = {
-    //"GameName": "webhook after discord.com/api/webhooks/"
-};
+var serverMapping = config.serverMapping;
 
 // #################################################################
 // Debug webhook if something goes wrong ( eg server or player is not found in arrays above )
