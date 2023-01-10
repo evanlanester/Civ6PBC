@@ -4,4 +4,4 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-sudo -u www-data tmux new-session -d -s Civ6PBC 'node index.js'
+sudo -u www-data tmux new-session -d -s Civ6PBC 'node public/index.js'

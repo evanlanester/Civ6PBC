@@ -8,7 +8,8 @@ Packages:
 - nodejs
 
 ### Quick Start:
-```apt install node npm tmux -y
+```bash
+apt install node npm tmux -y
 mkdir Civ6PBC
 cd Civ6PBC
 npm init -y
@@ -19,6 +20,13 @@ Setup your Civ 6 Play By Cloud Webhook URL to your API Endpoint:
 Game Options -> Game -> Play By Cloud WebHook URL: `https://api.example.com/pbc/`
 
 **Keep security in mind when running an App with Public Access - Limit Permissions and use a Limited User Account**
+
+For example:
+```bash
+chown -R www-data:www-data
+find -type f -exec chmod 644 {} \;
+find -type d -exec chmod 755 {} \;
+```
 
 #### Tested and Maintained on Debian Linux
 <img src="https://www.debian.org/Pics/debian-logo-1024x576.png" alt="drawing" width="200"/><https://www.debian.org/>
