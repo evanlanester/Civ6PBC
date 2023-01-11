@@ -51,19 +51,7 @@ const server = http.createServer(function (req, response) {
         });
     } else if (req.method == 'GET') {
         console.log('GET');
-        var html = fs.readFile(include/header.html) + `<main class="flex-shrink-0">
-            <div class="container">
-                <img href="https://cdn.hardlynerding.com/icons/games/Civ6.jpg">
-                <h1 class="mt-5">Civ6PBC to Webhook</h1>
-                <p class="lead">If you and your friends have a hard time keeping on top of your Civ 6 Play-by-Cloud turns, I created an API that relays your turns through a webhook to a chat client.</p>
-                <p>Use <a href="/docs/5.3/examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p>
-            </div>
-        </main>
-        <footer class="footer mt-auto py-3 bg-light">
-            <div class="container">
-                <span class="text-muted">Created by <a href="https://github.com/evanlanester">Evan Lane</a>.</span>
-            </div>
-        </footer>` + fs.readFile(include/footer.html);
+        var html = fs.readFile(view/index.htm);
         response.writeHead(200, { 'Content-Type': 'text/html' })
         response.end(html)
     } else {
