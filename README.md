@@ -9,11 +9,10 @@ Packages:
 
 ### Quick Start:
 ```bash
-apt install node npm tmux -y
+apt install git node npm tmux -y
 mkdir Civ6PBC
 cd Civ6PBC
-npm init -y
-npm install http https
+git clone https://github.com/evanlanester/Civ6PBC.git
 ```
 
 Setup your Civ 6 Play By Cloud Webhook URL to your API Endpoint:

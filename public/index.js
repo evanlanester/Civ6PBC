@@ -3,7 +3,7 @@ const https = require('https');
 const fs = require('fs');
 // ############################################################
 // Load Config.json - Environment Variables
-const config = require('./../config.json');
+const config = require("./../config.json");
 const port = config.port;
 const host = config.host;
 
@@ -51,11 +51,12 @@ const server = http.createServer(function (req, response) {
         });
     } else if (req.method == 'GET') {
         console.log('GET');
-        var html = fs.readFile(view/index.htm);
-        response.writeHead(200, { 'Content-Type': 'text/html' })
-        response.end(html)
+        fs.readFile('public/view/index.html','utf8', (err,data) => {
+            response.writeHead(200, { 'Content-Type': 'text/html' });
+            response.end(data);
+        });
     } else {
-        response.writeHead(402, { 'Content-Type': 'text/html' })
+        response.writeHead(402, { 'Content-Type': 'text/html' });
         response.end("Undefined request.");
     }
 });

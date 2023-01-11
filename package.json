@@ -1,0 +1,27 @@
+{
+    "name": "civ6pbc",
+    "version": "1.0.16",
+    "description": "Civ6PBC API to Webhook",
+    "main": "public/index.js",
+    "scripts": {
+      "test": "node public/index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/evanlanester/Civ6PBC.git"
+    },
+    "keywords": [
+      "api",
+      "webhook",
+      "civ6",
+      "civ",
+      "nodejs",
+      "js"
+    ],
+    "author": "Evan Lane",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+      "url": "https://github.com/evanlanester/Civ6PBC/issues"
+    },
+    "homepage": "https://github.com/evanlanester/Civ6PBC#readme"
+  }
